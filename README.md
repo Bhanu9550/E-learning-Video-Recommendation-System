@@ -22,22 +22,7 @@ An AI-powered web application that recommends the best YouTube videos for any le
 - Python 3.7+
 - [SerpApi API Key](https://serpapi.com/)
 
-### Installation
-1. **Clone the repository:**
-   ```bash
-   git clone <repo-url>
-   cd E-learning-Video-Recommendation-System
-   ```
-2. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. **Set your SerpApi key:**
-   - The SerpApi key is hardcoded in `app.py` as `SERPAPI_KEY`. To use your own key, open `app.py` and replace the value of `SERPAPI_KEY` with your personal SerpApi key:
-     ```python
-     SERPAPI_KEY = "your_serpapi_key_here"
-     ```
-   - **Note:** Environment variable usage is not implemented in this version. For better security in production, consider refactoring to use environment variables or a config file.
+
 
 ### Running the App
 ```bash
