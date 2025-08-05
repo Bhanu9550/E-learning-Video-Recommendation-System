@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Project</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .fixed-redirect-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #2563eb;
+      color: white;
+      padding: 12px;
+      border-radius: 50%;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      text-decoration: none;
+      /* Removes underline from link */
+      z-index: 1000;
+    }
+
+    .fixed-redirect-button:hover {
+      background: #1d4ed8;
+    }
+  </style>
+</head>
+
+<body class="bg-blue-900">
+  <div class="px-4 md:px-8 lg:px-12">
+    <div class="flex flex-col w-full py-8 my-8 bg-black rounded-lg">
+      
+      <h1 class="text-center font-bold text-4xl mb-6 text-red-700">E-learning Video Recommendation System</h1>
+      <div class="px-4 md:px-6 lg:px-8">
+      <p class="text-lg font-bold mb-8 text-gray-100">  An AI - powered web application that recommends the best YouTube videos for
+        any learning topic. Built with Flask, it leverages the [SerpApi] (https://serpapi.com/) YouTube Search API to
+        fetch    up-to-date video recommendations based on user queries.</p>
+      <h2 class="text-3xl font-bold mb-4 mt-6 text-red-700">Features</h2>
+      <p class="text-base font-bold mb-2 text-gray-100">- Instant YouTube Video Recommendations: Get top video picks for any topic.</p>
+      <p class="text-base font-bold mb-2 text-gray-100">- Modern UI: Responsive, visually appealing interface using Tailwind CSS.</p>
+      <h4 class="text-base font-bold mb-2 text-gray-100">- Predefined & Custom Topics: Choose from popular topics or enter your own.</h4>
+      <h4 class="text-base font-bold mb-2 text-gray-100">- No Sign-up Required: Start learning immediately.</h4>
+      <h2 class="text-3xl font-bold mb-4 mt-6 text-red-700">How It Works</h2>
+      <h4 class="text-base font-bold mb-2 text-gray-100">- User selects or enters a topic.</h4>
+      <h4 class="text-base font-bold mb-2 text-gray-100">- The app queries SerpApi's YouTube engine for relevant videos.</h4>
+      <h4 class="text-base font-bold mb-2 text-gray-100">- Top results are displayed with thumbnails and direct links.</h4>
+      <h2 class="text-3xl font-bold mb-4 mt-6 text-red-700">Dependencies</h2>
+      <h4 class="text-base font-bold mb-2 text-gray-100">- Flask</h4>
+      <h4 class="text-base font-bold mb-2 text-gray-100">- requests</h4>
+      <h2 class="text-3xl font-bold mb-4 mt-6 text-red-700">License</h2>
+      <h4 class="text-base font-bold mb-2 text-gray-100">- MIT License</h4>
+    </div>
+  </div>
+  <a href="/"
+    class="fixed top-10 right-14 bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-red-700 transition">
+    ← Home 
+  </a>
+  </div>
+</body>
+
+</html>
