@@ -28,7 +28,7 @@ An AI-powered web application that recommends the best YouTube videos for any le
 ```bash
 python app.py
 ```
-Visit [http://127.0.0.1:5000/](http://127.0.0.1:5000/) in your browser.
+Visit [http://127.0.0.1:5000/](https://e-learning-video-recommendation-system.onrender.com) in your browser.
 
 ## File Structure
 ```
