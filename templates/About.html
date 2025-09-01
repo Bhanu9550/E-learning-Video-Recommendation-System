@@ -4,60 +4,297 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Project</title>
+  <title>About Project - E-learning Video Recommendation System</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    .fixed-redirect-button {
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+      min-height: 100vh;
+    }
+    
+    .hero-gradient {
+      background: linear-gradient(135deg, #ef4444 0%, #7e22ce 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .feature-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(239, 68, 68, 0.2);
+      border-color: rgba(239, 68, 68, 0.3);
+    }
+    
+    .glow {
+      text-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+    }
+    
+    .section-title {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, #ef4444, #7e22ce);
+      border-radius: 3px;
+    }
+    
+    .tech-badge {
+      background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      display: inline-block;
+      margin: 0 5px 5px 0;
+    }
+    
+    .home-button {
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+    }
+    
+    .home-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(34, 197, 94, 0.5);
+    }
+    
+    .back-to-top {
       position: fixed;
-      bottom: 20px;
+      bottom: 90px;
       right: 20px;
       background: #2563eb;
       color: white;
-      padding: 12px;
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
       cursor: pointer;
-      text-decoration: none;
-      /* Removes underline from link */
       z-index: 1000;
+      transition: all 0.3s ease;
     }
-
-    .fixed-redirect-button:hover {
-      background: #1d4ed8;
+    
+    .back-to-top:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
     }
   </style>
 </head>
 
-<body class="bg-blue-900">
-  <div class="px-4 md:px-8 lg:px-12">
-    <div class="flex flex-col w-full py-8 my-8 bg-black rounded-lg">
+<body class="text-gray-100">
+  <!-- Navigation -->
+  <nav class="container mx-auto px-4 py-6 flex justify-between items-center">
+    <div class="flex items-center">
+      <div class="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center mr-3">
+        <i class="fas fa-robot text-white"></i>
+      </div>
+      <h1 class="text-xl font-bold">E-learning Video Bot</h1>
+    </div>
+    
+    <a href="/" class="home-button bg-green-600 text-white px-6 py-2 rounded-full shadow-lg font-medium">
+      <i class="fas fa-home mr-2"></i> Home
+    </a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="container mx-auto px-4 py-12 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold mb-6 hero-gradient">E-learning Video Recommendation System</h1>
+    <p class="text-xl max-w-3xl mx-auto mb-10 text-blue-100">
+      An AI-powered web application that recommends the best YouTube videos for any learning topic. 
+      Built with Flask and modern web technologies.
+    </p>
+    
+    <div class="flex justify-center space-x-4 mb-16">
+      <div class="w-12 h-12 rounded-full bg-red-600 flex items-center justify-center">
+        <i class="fab fa-youtube text-white text-xl"></i>
+      </div>
       
-      <h1 class="text-center font-bold text-4xl mb-6 text-red-700">E-learning Video Recommendation System</h1>
-      <div class="px-4 md:px-6 lg:px-8">
-      <p class="text-lg font-bold mb-8 text-gray-100">  An AI - powered web application that recommends the best YouTube videos for
-        any learning topic. Built with Flask, it leverages the [SerpApi] (https://serpapi.com/) YouTube Search API to
-        fetch    up-to-date video recommendations based on user queries.</p>
-      <h2 class="text-3xl font-bold mb-4 mt-6 text-red-700">Features</h2>
-      <p class="text-base font-bold mb-2 text-gray-100">- Instant YouTube Video Recommendations: Get top video picks for any topic.</p>
-      <p class="text-base font-bold mb-2 text-gray-100">- Modern UI: Responsive, visually appealing interface using Tailwind CSS.</p>
-      <h4 class="text-base font-bold mb-2 text-gray-100">- Predefined & Custom Topics: Choose from popular topics or enter your own.</h4>
-      <h4 class="text-base font-bold mb-2 text-gray-100">- No Sign-up Required: Start learning immediately.</h4>
-      <h2 class="text-3xl font-bold mb-4 mt-6 text-red-700">How It Works</h2>
-      <h4 class="text-base font-bold mb-2 text-gray-100">- User selects or enters a topic.</h4>
-      <h4 class="text-base font-bold mb-2 text-gray-100">- The app queries SerpApi's YouTube engine for relevant videos.</h4>
-      <h4 class="text-base font-bold mb-2 text-gray-100">- Top results are displayed with thumbnails and direct links.</h4>
-      <h2 class="text-3xl font-bold mb-4 mt-6 text-red-700">Dependencies</h2>
-      <h4 class="text-base font-bold mb-2 text-gray-100">- Flask</h4>
-      <h4 class="text-base font-bold mb-2 text-gray-100">- requests</h4>
-      <h2 class="text-3xl font-bold mb-4 mt-6 text-red-700">License</h2>
-      <h4 class="text-base font-bold mb-2 text-gray-100">- MIT License</h4>
+  </section>
+
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 pb-20">
+    <div class="max-w-4xl mx-auto">
+      
+      <!-- How It Works Section -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold mb-8 text-center section-title glow text-red-500">How It Works</h2>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="feature-card p-6 rounded-xl text-center">
+            <div class="w-16 h-16 rounded-full bg-red-500 flex items-center justify-center mx-auto mb-4">
+              <span class="text-white text-2xl font-bold">1</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Enter a Topic</h3>
+            <p class="text-blue-100">Select from predefined topics or enter your own learning subject</p>
+          </div>
+          
+          <div class="feature-card p-6 rounded-xl text-center">
+            <div class="w-16 h-16 rounded-full bg-purple-500 flex items-center justify-center mx-auto mb-4">
+              <span class="text-white text-2xl font-bold">2</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">AI Processing</h3>
+            <p class="text-blue-100">Our system queries the YouTube API for the most relevant educational content</p>
+          </div>
+          
+          <div class="feature-card p-6 rounded-xl text-center">
+            <div class="w-16 h-16 rounded-full bg-blue-500 flex items-center justify-center mx-auto mb-4">
+              <span class="text-white text-2xl font-bold">3</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Get Recommendations</h3>
+            <p class="text-blue-100">Receive curated video recommendations tailored to your learning needs</p>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Features Section -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold mb-8 text-center section-title glow text-red-500">Key Features</h2>
+        
+        <div class="feature-card p-8 rounded-xl mb-6">
+          <div class="flex items-start">
+            <div class="bg-red-500 p-3 rounded-full mr-5">
+              <i class="fas fa-bolt text-white"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Instant YouTube Video Recommendations</h3>
+              <p class="text-blue-100">Get top video picks for any topic in seconds with our AI-powered search</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="feature-card p-8 rounded-xl mb-6">
+          <div class="flex items-start">
+            <div class="bg-purple-500 p-3 rounded-full mr-5">
+              <i class="fas fa-paint-brush text-white"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Modern UI</h3>
+              <p class="text-blue-100">Enjoy a responsive, visually appealing interface built with Tailwind CSS</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="feature-card p-8 rounded-xl mb-6">
+          <div class="flex items-start">
+            <div class="bg-blue-500 p-3 rounded-full mr-5">
+              <i class="fas fa-lightbulb text-white"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Predefined & Custom Topics</h3>
+              <p class="text-blue-100">Choose from popular learning topics or enter your own specific subject</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="feature-card p-8 rounded-xl">
+          <div class="flex items-start">
+            <div class="bg-green-500 p-3 rounded-full mr-5">
+              <i class="fas fa-user-check text-white"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">No Sign-up Required</h3>
+              <p class="text-blue-100">Start learning immediately without any registration or login process</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Technology Section -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold mb-8 text-center section-title glow text-red-500">Technology Stack</h2>
+        
+        <div class="feature-card p-8 rounded-xl">
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h3 class="text-xl font-semibold mb-4">Backend</h3>
+              <div class="tech-badge">Flask</div>
+              <div class="tech-badge">Python</div>
+              <div class="tech-badge">SerpApi YouTube API</div>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-semibold mb-4">Frontend</h3>
+              <div class="tech-badge">HTML5</div>
+              <div class="tech-badge">Tailwind CSS</div>
+              <div class="tech-badge">JavaScript</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- API Section -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold mb-8 text-center section-title glow text-red-500">API Integration</h2>
+        
+        <div class="feature-card p-8 rounded-xl">
+          <div class="flex items-center mb-4">
+            <div class="bg-red-500 p-3 rounded-full mr-5">
+              <i class="fab fa-youtube text-white text-xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold">SerpApi YouTube Search API</h3>
+          </div>
+          <p class="text-blue-100 mb-4">
+            Our application leverages the powerful SerpApi YouTube Search API to fetch up-to-date video recommendations 
+            based on user queries. This ensures that you always get the most relevant and recent educational content.
+          </p>
+          <a href="https://serpapi.com/" target="_blank" class="text-red-400 hover:text-red-300 font-medium">
+            Learn more about SerpApi <i class="fas fa-arrow-right ml-1"></i>
+          </a>
+        </div>
+      </section>
+      
+      <!-- License Section -->
+      <section>
+        <h2 class="text-3xl font-bold mb-8 text-center section-title glow text-red-500">License</h2>
+        
+        <div class="feature-card p-8 rounded-xl text-center">
+          <div class="w-20 h-20 rounded-full bg-gray-800 flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-balance-scale text-white text-3xl"></i>
+          </div>
+          <h3 class="text-2xl font-semibold mb-3">MIT License</h3>
+          <p class="text-blue-100">
+            This project is open source and available under the MIT License, allowing for free use, modification, and distribution.
+          </p>
+        </div>
+      </section>
     </div>
   </div>
-  <a href="/"
-    class="fixed top-10 right-14 bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-red-700 transition">
-    ← Home 
-  </a>
+
+  <!-- Back to Top Button -->
+  <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    <i class="fas fa-arrow-up"></i>
   </div>
+
+  <script>
+    // Show/hide back to top button based on scroll position
+    window.addEventListener('scroll', function() {
+      const backToTop = document.querySelector('.back-to-top');
+      if (window.scrollY > 300) {
+        backToTop.style.display = 'flex';
+      } else {
+        backToTop.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 
 </html>
