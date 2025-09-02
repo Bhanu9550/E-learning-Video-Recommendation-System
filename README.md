@@ -53,7 +53,6 @@ Visit [http://127.0.0.1:5000/](https://e-learning-video-recommendation-system.on
 ## Dependencies
 - Flask
 - requests
-- pymongo *(not used in current code, but listed in requirements)*
 
 ## License
 MIT License
